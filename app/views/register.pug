@@ -1,0 +1,20 @@
+extends layout.pug
+
+block title
+  title Register
+
+block content
+  h1 Register
+  form(target='register' method='post')
+    .form-group
+      label(for='fullName') Full Name:
+        input.form-control(type='text' id='fullName' placeholder='Juan Perez')
+    .form-group
+      label(for='email') Email:
+        input.form-control(type='email' id='email' placeholder='email')
+    .form-group
+      label(for='password') Password:
+        input.form-control(type='password' id='password' placeholder='password')
+    .form-group
+      button.btn.btn-primary(type='submit') Register
+      a.btn.btn-default.btn-xs(href='/login' role='button') Alredy Registered?

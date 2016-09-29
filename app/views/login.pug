@@ -1,0 +1,17 @@
+extends layout.pug
+
+block title
+  title Login
+
+block content
+  h1 Login
+  form(target='login' method='post')
+    .form-group
+      label(for='email') Email:
+        input.form-control(type='email' id='email' placeholder='email')
+    .form-group
+      label(for='password') Password:
+        input.form-control(type='password' id='password' placeholder='password')
+    .form-group
+      button.btn.btn-primary(type='submit') Login
+      a.btn.btn-default.btn-xs(href='/register' role='button') Not Registered?

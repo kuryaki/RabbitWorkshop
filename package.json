@@ -1,0 +1,33 @@
+{
+  "name": "rabbit-workshop",
+  "version": "0.0.1",
+  "description": "Workshop on rabbit usage with node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuryaki/JSConf16Workshop.git"
+  },
+  "keywords": [
+    "rabbit",
+    "node"
+  ],
+  "author": "David Roncancio <david@roncancio.me>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuryaki/JSConf16Workshop/issues"
+  },
+  "homepage": "https://github.com/kuryaki/JSConf16Workshop#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-winston": "^2.0.0",
+    "jackrabbit": "^4.3.0",
+    "pug": "^2.0.0-beta6",
+    "scribe-js": "^3.0.0-alpha.10",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {}
+}
