@@ -6,6 +6,12 @@ JSConf Colombia 2016
 
  [] Slides ?
   [] Motivation of the workshop is to show the usage of the tool not to make it a golden hammer
+    [] Move and release indepently
+    [] Own your uptime
+    [] Use the "Best" tool for the job
+    EVERYTHING IS A TRADEOFF
+    [] Complexity
+    [] Timeouts (RPC)
   [] Talk about when to use microservices (start monolithic)
   [] HTTP vs MQ
   [] AMQP
