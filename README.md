@@ -25,7 +25,7 @@ JSConf Colombia 2016
    [x] https://wildboar.rmq.cloudamqp.com/#/
 
  [] Workshop Steps
-  [] simple in memory login/register service
+  [x] simple in memory login/register service
   [] make register send an email via simple producer consumer (prod/consumer)
   [] agregate both services in a loggin service (pub/sub)
   [] add loggin normally to show how you need to alter routes

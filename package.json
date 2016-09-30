@@ -22,9 +22,13 @@
   "homepage": "https://github.com/kuryaki/JSConf16Workshop#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
+    "express-session": "^1.14.1",
     "express-winston": "^2.0.0",
     "jackrabbit": "^4.3.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "pug": "^2.0.0-beta6",
     "scribe-js": "^3.0.0-alpha.10",
     "winston": "^2.2.0"
