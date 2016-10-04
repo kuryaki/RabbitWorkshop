@@ -4,12 +4,15 @@ const Users = require('./models/user');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
+const jackrabbit = require('jackrabbit');
+const rabbit = jackrabbit('amqp://localhost');
+const exchange = rabbit.topic('jsconf');
+
 passport.use(new LocalStrategy({ usernameField: 'email', session: false }, Users.validate));
 passport.serializeUser((user, cb) => cb(null, user.email));
 passport.deserializeUser(Users.findOne);
 
 const authenticated = (req, res, next) => {
-    console.log('authentucated?', req.isAuthenticated())
     if (req.isAuthenticated()) {
         return next();
     }
@@ -41,12 +44,11 @@ router.post('/login', passport.authenticate('local'), (req, res) => {
 router.post('/register', (req, res, next) => {
     const user = req.body;
     if (!user.email || !user.password) {
-        // TODO validate input
         return next(new Error('Missing required parameters'));
     }
     Users.findOneOrCreate(user.email, user, (error) => {
         res.redirect('/login');
-        Users.findOne(user.email, console.log);
+        exchange.publish(user, { key: 'register.user' })
     });
 });
 
