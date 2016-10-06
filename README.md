@@ -1,12 +1,8 @@
 # RabbitMQ for microservices
 JSConf Colombia 2016
 
+## Workshop
 
-## Workshop Steps
-
-0. Make register send an email via simple producer consumer (prod/consumer)
-1. Add another consumer to the key to send analitycs (pub/sub)
-2. Add a single endpoint to handle RPC for `/resources`
-3. Add RPC service to handle crud for CRUD as `action.resource`
-4. Reuse `mailer` from `resourcer` on resource delete
-4. Handle failure nacks + service monitoring
+1. [Getting Started - Setup + Produce/Consume](https://github.com/kuryaki/RabbitWorkshop/wiki)
+1. [Routing and Pub/Sub](https://github.com/kuryaki/RabbitWorkshop/wiki/Exercise-1)
+1. [RPC](https://github.com/kuryaki/RabbitWorkshop/wiki/Exercise---2)
