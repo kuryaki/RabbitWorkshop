@@ -6,5 +6,6 @@ const consumer = exchange.queue({ key: 'register.user', name: 'mailer' });
 
 consumer.consume((data, ack) => {
   console.log(`sending email to ${data.email}`);
+  exchange.publish(data, { key: 'email.user' });
   ack();
 });

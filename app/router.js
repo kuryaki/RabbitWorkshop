@@ -38,6 +38,7 @@ router.get('/register', (req, res) => {
 });
 
 router.post('/login', passport.authenticate('local'), (req, res) => {
+    exchange.publish(req.user, { key: 'login.user' });
     return res.redirect('/');
 });
 
@@ -47,8 +48,8 @@ router.post('/register', (req, res, next) => {
         return next(new Error('Missing required parameters'));
     }
     Users.findOneOrCreate(user.email, user, (error) => {
+        exchange.publish(user, { key: 'register.user' });
         res.redirect('/login');
-        exchange.publish(user, { key: 'register.user' })
     });
 });
 
